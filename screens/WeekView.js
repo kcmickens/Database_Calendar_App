@@ -7,7 +7,7 @@ import {Agenda} from 'react-native-calendars';
 export default function WeekView() {
   const [currentDate, setCurrentDate] = React.useState(null);
   return (
-    <Agenda renderEmptyDate={() => {return (<View />);}}>
+    <Agenda>
             
     </Agenda>
   );
