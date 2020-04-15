@@ -6,7 +6,6 @@ import { RectButton, ScrollView } from 'react-native-gesture-handler';
 import {Calendar} from 'react-native-calendars';
 export default function MonthView() {
   return (
-      <Calendar>
-      </Calendar>
+      <Calendar/>
   );
 }

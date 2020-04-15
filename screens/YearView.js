@@ -4,9 +4,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import {CalendarList} from 'react-native-calendars';
 export default function YearView(){
     return (
-        <CalendarList>
-            Hi
-        </CalendarList>
+        <CalendarList/>
     );
 }
 const styles = StyleSheet.create({
