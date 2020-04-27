@@ -1,6 +1,6 @@
 const sqlite3 = require('sqlite3').verbose();
 
-let db = new sqlite3.Database('/Users/malcolmphipps/Desktop/CalApp.db')
+let db = new sqlite3.Database('/Users/malcolmphipps/Documents/GitHub/Database_Calendar_App/CalApp.db')
 
 let sql = `SELECT * FROM Events`;
 
@@ -14,3 +14,4 @@ db.all(sql, [], (err, rows) => {
 });
 
 db.close();
+export {db};
