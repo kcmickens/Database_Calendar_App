@@ -21,7 +21,6 @@ export default function WeekView(props) {
           console.log(err);
         })
     );
-    forceUpdated(!update);
   }
   function renderEmptyDate() {
     return (
@@ -47,14 +46,16 @@ export default function WeekView(props) {
             (tx,results) => {
               results.rows._array.forEach((row)=>{result2.push({event_name: row.event_name,start_time:row.start_time,
                 description:row.description,end_time:row.end_time,location:row.Location,eventId:row.eventId}); 
-                if(row.event_name!=null){
-                  console.log("date: "+row.start_time+' name: '+row.event_name);
-                  items[strTime]=result2;
-                }});
+                  if(row.event_name!=null){
+                    console.log("date: "+row.start_time+' name: '+row.event_name);
+                  }
+                }
+                );
             },function(tx,err){
               console.log(err);
             })
           );
+          items[strTime]=result2;
       }
       const newItems = {};
       Object.keys(items).forEach(key => {newItems[key] = items[key];});
